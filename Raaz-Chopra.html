@@ -1,31 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YASH GOWDA - Cricket Analyst</title>
 
-<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
-
+<!-- Tailwind CDN (SAFE MODE) -->
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://unpkg.com/feather-icons"></script>
-<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
 
-<script>
-tailwind.config = {
-theme: {
-extend: {
-colors: {
-electric: {400:'#00f0ff',500:'#00c2ff',600:'#0095ff'},
-neon: {400:'#bd00ff',500:'#a000ff',600:'#7d00ff'}
-}
-}}
-}
-</script>
+<!-- Feather Icons -->
+<script src="https://unpkg.com/feather-icons"></script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
 body{
 font-family:'Inter',sans-serif;
@@ -35,32 +22,18 @@ background-size:cover;
 min-height:100vh;
 }
 
-.glass-card{
-background:rgba(15,20,40,.65);
-backdrop-filter:blur(12px);
-border:1px solid rgba(255,255,255,.1);
+.glass{
+background:rgba(0,0,0,.55);
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,.15);
 }
 
-.profile-ring{
-box-shadow:0 0 0 3px rgba(0,242,255,.5),0 0 0 6px rgba(189,0,255,.3);
-}
-
-.glow-hover:hover{
-box-shadow:0 0 25px rgba(0,242,255,.6);
-}
-
-.pulse{
-animation:pulse 2s infinite;
-}
-
-@keyframes pulse{
-0%{box-shadow:0 0 0 0 rgba(0,242,255,.4);}
-70%{box-shadow:0 0 0 15px rgba(0,242,255,0);}
-100%{box-shadow:0 0 0 0 rgba(0,242,255,0);}
+.ring{
+box-shadow:0 0 0 3px #00f0ff, 0 0 0 6px #a000ff;
 }
 </style>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s){
 if(f.fbq)return;
@@ -74,115 +47,26 @@ t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
 }(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
 fbq('init','1352099405820230');
 fbq('track','PageView');
 </script>
-<!-- End Meta Pixel -->
-
 </head>
 
-<body class="text-white flex items-center justify-center p-4">
+<body class="text-white flex justify-center items-center p-4">
 
-<div class="container max-w-md mx-auto">
+<div class="max-w-md w-full text-center">
 
-<!-- Profile Section -->
-<div class="flex flex-col items-center mb-8 pt-6">
-<div class="profile-ring rounded-full p-1 mb-4">
+<!-- Profile -->
+<div class="mb-8">
+<div class="ring inline-block p-1 rounded-full mb-4">
 <img src="https://github.com/bestanalystt/yasgowda/blob/main/YASHLOGO.jpg?raw=true"
-     class="w-24 h-24 rounded-full object-cover"
-     alt="YASH GOWDA">
+class="w-24 h-24 rounded-full object-cover">
 </div>
 
-<h1 class="text-2xl font-bold mb-1">YASH GOWDA</h1>
-
-<div class="flex items-center text-electric-400">
-<i data-feather="users" class="w-4 h-4 mr-1"></i>
-<span>Cricket Analyst</span>
-</div>
-</div>
-
-<!-- Stats -->
-<div class="grid grid-cols-3 gap-4 mb-8">
-<div class="glass-card rounded-xl p-4 text-center">
-<div class="text-electric-400 text-2xl font-bold">22/22</div>
-<div class="text-xs text-gray-300">Hundred Record</div>
-</div>
-
-<div class="glass-card rounded-xl p-4 text-center">
-<div class="text-neon-400 text-2xl font-bold">500+</div>
-<div class="text-xs text-gray-300">Predictions</div>
-</div>
-
-<div class="glass-card rounded-xl p-4 text-center">
-<div class="text-electric-400 text-2xl font-bold">95%</div>
-<div class="text-xs text-gray-300">Accuracy</div>
-</div>
-</div>
-
-<!-- Countdown -->
-<div class="glass-card rounded-xl p-4 mb-6 text-center">
-<p class="text-electric-400 font-semibold mb-2">Next Update In</p>
-<div class="text-xl font-bold">
-<span id="minutes">00</span> :
-<span id="seconds">00</span>
-</div>
-</div>
-
-<!-- Telegram Button -->
-<a href="https://t.me/+U-jCLwP7n-FmMjU1"
-   target="_blank"
-   class="w-full bg-gradient-to-r from-electric-500 to-neon-500
-          hover:from-electric-600 hover:to-neon-600
-          text-white font-bold py-4 rounded-xl
-          flex items-center justify-center glow-hover pulse">
-
-<i data-feather="send" class="w-5 h-5 mr-2"></i>
-Join Telegram Channel
-</a>
-
-<!-- Info -->
-<div class="text-center my-6">
-<p class="text-electric-400 font-semibold">
-Most consistent analyst in the market !!
+<h1 class="text-2xl font-bold">YASH GOWDA</h1>
+<p class="text-cyan-300 flex justify-center items-center gap-1">
+<i data-feather="users"></i> Cricket Analyst
 </p>
-<p class="text-neon-400">Entrepreneur || Businessman</p>
-<p class="text-gray-300 text-sm">Owner of 9 International business</p>
 </div>
 
-<!-- Disclaimer -->
-<div class="glass-card rounded-xl p-5 text-sm text-gray-300">
-<b class="block text-center mb-2">Disclaimer</b>
-This page provides cricket analysis and general information only.
-No betting or gambling is promoted. Any action taken is at your own discretion.
-</div>
-
-</div>
-
-<script>
-feather.replace();
-
-function updateCountdown(){
-const now=new Date();
-const target=new Date(now.getTime()+60000);
-const diff=target-now;
-const m=Math.floor(diff/60000);
-const s=Math.floor((diff%60000)/1000);
-document.getElementById("minutes").textContent=String(m).padStart(2,"0");
-document.getElementById("seconds").textContent=String(s).padStart(2,"0");
-}
-setInterval(updateCountdown,1000);
-updateCountdown();
-
-anime({
-targets:'.glass-card',
-translateY:[20,0],
-opacity:[0,1],
-delay:anime.stagger(100),
-duration:800,
-easing:'easeOutQuad'
-});
-</script>
-
-</body>
-</html>
+<!-- Stats --
